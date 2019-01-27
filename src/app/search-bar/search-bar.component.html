@@ -1,17 +1,12 @@
 <div class="searchForm">
   <form class="example-form" #f="ngForm" (ngSubmit)="searchRequest($event)" action="" method="">
     <div class="row">
-
-      
-        <input name="search_term" matInput placeholder="Search Trash" aria-label="Trash" [matAutocomplete]="auto" [formControl]="stateCtrl">
+        <input name="search_term" class="form-control" matInput placeholder="Search Trash" aria-label="Trash" [matAutocomplete]="auto" [formControl]="stateCtrl">
         <mat-autocomplete #auto="matAutocomplete">
           <mat-option *ngFor="let trash of filteredTrash | async" [value]="trash.actual">
             <span>{{trash.actual}}</span>
           </mat-option>
         </mat-autocomplete>
-      
-
-
     </div>
     <div class="search-image-locations col-xs-12">
       <div *ngIf="search_box_empty===true" (click)="activateSpeechSearch(f)"><i class="search-image fas fa-microphone"></i></div>
