@@ -1,22 +1,24 @@
 <div class="searchForm">
   <form class="example-form" #f="ngForm" (ngSubmit)="searchRequest($event)" action="" method="">
     <div class="row">
-        <input name="search_term" class="form-control" matInput placeholder="Search Trash" aria-label="Trash" [matAutocomplete]="auto" [formControl]="stateCtrl">
-        <mat-autocomplete #auto="matAutocomplete">
-          <mat-option *ngFor="let trash of filteredTrash | async" [value]="trash.actual">
-            <span>{{trash.actual}}</span>
-          </mat-option>
-        </mat-autocomplete>
-    </div>
-    <div class="search-image-locations col-xs-12">
-      <div *ngIf="search_box_empty===true" (click)="activateSpeechSearch(f)"><i class="search-image fas fa-microphone"></i></div>
-      <div *ngIf="search_box_empty===true" (click)="triggerWebCam()"><i class="search-image2 fas fa-camera"></i></div>
-      <div *ngIf="search_box_empty===false" (click)="setSearchBoxEmpty(f)"><i class="search-image fas fa-times"></i></div>
-    </div>
-    <div class="search-button col-xs-12">
-      <button type="submit" name="" class="submit-btn btn btn-success" [disabled]='!f.valid'>
-        Search
-      </button>
+        <div class="form-group col-8 col-md-6">
+          <input name="search_term" class="form-control" matInput placeholder="Search Trash" aria-label="Trash" [matAutocomplete]="auto" [formControl]="stateCtrl">
+          <mat-autocomplete #auto="matAutocomplete">
+            <mat-option *ngFor="let trash of filteredTrash | async" [value]="trash.actual">
+              <span>{{trash.actual}}</span>
+            </mat-option>
+          </mat-autocomplete>
+        </div>
+        <div class="search-image-locations col-xs-12">
+            <div *ngIf="search_box_empty===true" (click)="activateSpeechSearch(f)"><i class="search-image fas fa-microphone"></i></div>
+            <div *ngIf="search_box_empty===true" (click)="triggerWebCam()"><i class="search-image2 fas fa-camera"></i></div>
+            <div *ngIf="search_box_empty===false" (click)="setSearchBoxEmpty(f)"><i class="search-image fas fa-times"></i></div>
+          </div>
+          <div class="search-button col-xs-12">
+            <button type="submit" name="" class="submit-btn btn btn-success" [disabled]='!f.valid'>
+              Search
+            </button>
+          </div>
     </div>
   </form>
   <app-barcode></app-barcode>
