@@ -28,3 +28,7 @@ body {
     margin-left: 335px;
     font-family: "Lato", serif;
 }
+
+#typed-strings{
+    display: none;
+}

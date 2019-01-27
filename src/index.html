@@ -16,15 +16,20 @@
 </head>
 <body>
   <div class="background"></div>
+    <div id="typed-strings">
+        <p>takeout?</p>
+        <p>plastics?</p>
+        <p>anything?</p>
+    </div>
     <div class="header">
-      Where do I throw out... <span id="typedClass"></span>
+      Where do I throw out... <span id="typed"></span>
       <script>
-          var typed = new Typed('#typedClass', {
-            strings: ["takeout?", "batteries?", "everything?"],
-            typeSpeed: 50,
-            backSpeed: 50,
-          });
-          </script>
+      var typed = new Typed('#typed', {
+        stringsElement: '#typed-strings',
+        typeSpeed: 50,
+        backSpeed: 50,
+      });
+      </script>
     </div>
     <app-root></app-root>
   <noscript>Please enable JavaScript to continue using this application.</noscript>

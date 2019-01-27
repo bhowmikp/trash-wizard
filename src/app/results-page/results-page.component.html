@@ -1,16 +1,25 @@
 <div class="centered-div">
     <div class="type">
-        <img class="garbage-type" src="../../assets/icons/garbagebin.png"/>
+        <div *ngIf="filteredTrash[0].category == 'Garbage'">
+            <img class="garbage-type" src="../../assets/icons/garbagebin.png"/>
+        </div>
+        <div *ngIf="filteredTrash[0].category == 'Blue Bin'">
+            <img class="garbage-type" src="../../assets/icons/bluebin.png"/>
+        </div>
+        <div *ngIf="filteredTrash[0].category == 'Green Bin'">
+            <img class="garbage-type" src="../../assets/icons/greenbin.png"/>
+        </div>
+        <div *ngIf="filteredTrash[0].category == 'HHW'">
+            <img class="garbage-type whitewashed" src="../../assets/icons/hhw.png"/>
+        </div>
     </div>
     <div class="info">
-        <span>{{search_term}}</span>
-        <br>
-        <span>{{filteredTrash[0].actual}}</span>
-        <br>
-        <span>{{filteredTrash[0].title}}</span>
-        <br>
-        <span>{{filteredTrash[0].body}}</span>
-        <br>
-        <span>{{filteredTrash[0].category}}</span>
+        <span class="category">Item</span><br><span>{{search_term}}</span>
+        <br><br>
+        <span class="category">Category</span><br><span>{{filteredTrash[0].title}}</span>
+        <br><br>
+        <span class="category">Specifics</span><br><span>{{filteredTrash[0].category}}</span>
+        <br><br>
+        <span class="category">Advice</span><br><span>{{filteredTrash[0].body}}</span>
     </div>
 </div>
