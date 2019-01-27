@@ -12,6 +12,9 @@
         <div *ngIf="filteredTrash[0].category == 'HHW'">
             <img class="garbage-type whitewashed" src="../../assets/icons/hhw.png"/>
         </div>
+        <div *ngIf="filteredTrash[0].category == 'Oversized' || filteredTrash[0].category == 'Metal Items' || filteredTrash[0].category == 'Depot'">
+            <img class="garbage-type whitewashed" src="../../assets/icons/na.png"/>
+        </div>>
     </div>
     <div class="info">
         <span class="category">Item</span><br><span>{{search_term}}</span>
@@ -21,5 +24,11 @@
         <span class="category">Specifics</span><br><span>{{filteredTrash[0].category}}</span>
         <br><br>
         <span class="category">Advice</span><br><span>{{filteredTrash[0].body}}</span>
+        <br><br>
+        <span class="category">Useful Links</span>
+        <br>
+        Check out when to put it curbside by consulting your <a href="https://www.toronto.ca/services-payments/recycling-organics-garbage/houses/collection-schedule/"> Garbage Collection Schedule.</a>
+        <br>
+        More information on <a href="https://www.toronto.ca/services-payments/property-taxes-utilities/utility-bill/solid-waste-rates/">Possible additional fees.</a>
     </div>
 </div>

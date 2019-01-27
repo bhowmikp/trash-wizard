@@ -6,7 +6,7 @@
     width: 65%;
     display: flex;
     flex-direction: row;
-    background-color: rgba(0,0,0,0.6);
+    background-color: rgba(10, 70, 23, 0.3);
     padding: 30px 15px 30px 15px;
     border-radius: 15px;
 }
@@ -20,12 +20,14 @@
     min-height: 200px;
     max-width: 100%;
     margin: auto;
+    margin-top: 50px;
 }
 
 .info{
     width: 80%;
     color: white;
     font-size: 14px;
+    padding-left: 15px;
 }
 
 .category{
@@ -40,4 +42,6 @@
 
 .whitewashed{
     filter: brightness(300%);
+    background-color: white;
+    border-radius: 22px;
 }
