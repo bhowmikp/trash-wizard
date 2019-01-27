@@ -16,17 +16,17 @@
 </head>
 <body>
   <div class="background"></div>
-  <div class="header">
+    <div class="header">
       Where do I throw out... <span id="typedClass"></span>
+      <script>
+          var typed = new Typed('#typedClass', {
+            strings: ["takeout?", "batteries?", "everything?"],
+            typeSpeed: 50,
+            backSpeed: 50,
+          });
+          </script>
     </div>
     <app-root></app-root>
-    <script>
-    var typed = new Typed('#typedClass', {
-      strings: ["takeout?", "batteries?", "everything?"],
-      typeSpeed: 50,
-      backSpeed: 50,
-    });
-    </script>
   <noscript>Please enable JavaScript to continue using this application.</noscript>
 </body>
 </html>
