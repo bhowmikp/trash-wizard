@@ -6,6 +6,8 @@ import { Router } from '@angular/router';
 import {Observable} from 'rxjs';
 
 import {Trash, data} from '../search-bar/trash';
+import * as extractor from 'striptags';
+import * as cleaner from 'html-cleaner';
 
 @Component({
   selector: 'app-results-page',
@@ -27,6 +29,8 @@ export class ResultsPageComponent implements OnInit {
 
     console.log(this.search_term);
     this.filteredTrash = this._filterTrash();
+    this.filteredTrash[0].body = cleaner.unescape(cleaner.escape(this.filteredTrash[0].body));
+    this.filteredTrash[0].body = extractor(this.filteredTrash[0].body);
   }
 
   private _filterTrash(): Trash[] {
