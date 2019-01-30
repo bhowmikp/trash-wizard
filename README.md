@@ -1,28 +1,59 @@
-# TrashWizard
+# [TrashWizard](https://trashwizard-10850.firebaseapp.com/)
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.2.3.
+The goal of the app is to provide an interface to aid consumers properly dispose garbade, recycling, organics and other items according to the standard set out by City of Toronto's waste management team.
 
-## Development server
+- Serverless Progressive Web App (PWA) written with Angular as the frontend, and all the data is stored locally so the application can be scaled easily while still providing a fast look up time
+- The app was created as a sustainable project for ConUHacks IV
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Getting Started
 
-## Code scaffolding
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+### Prerequisites
 
-## Build
+What things you need to install the software and how to install them
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+```
+Install Node
+Install NPM
+```
 
-## Running unit tests
+### Installing
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+A step by step series of examples that tell you how to get a development env running
 
-## Running end-to-end tests
+```
+npm install -g @angular/cli
+npm install
+ng serve
+```
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+## Running the tests
 
-## Further help
+Explain how to run the automated tests for this system
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
-# trash-wizard
+### And coding style tests
+
+Explain what these tests test and why
+
+```
+ng lint
+```
+
+## Plans
+
+- Voice search works but cannot perform searches according to it, therefore it needs to be integrated
+- Barcode scanner does not work properly, need to look into a new library
+
+## Built With
+
+* [Angular](https://angular.io/) - Web Framework
+* [City of Toronto's: Garbage & Recycling Data Catalogue](https://www.toronto.ca/city-government/data-research-maps/open-data/open-data-catalogue/garbage-and-recycling/#5ed40494-a290-7807-d5da-09ab6a56fca2) - Data
+
+## Authors
+
+* **Prantar Bhowmik** - *Logic* - [bhowmikp](https://github.com/bhowmikp)
+* **Brian Chen** - *User Experience* - [byxchen](https://github.com/byxchen)
+
+
+See also the list of [contributors](https://github.com/bhowmikp/bhowmikp.github.io/graphs/contributors) who participated in this project.
